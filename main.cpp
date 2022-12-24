@@ -1,14 +1,15 @@
 #include <QApplication>
 #include <QFontDatabase>
 #include <QLabel>
-#include <QtCore>
-#include <qfontdatabase.h>
+#include <QString>
+
+using namespace Qt::StringLiterals;
 
 // Credits:
 // https://blog.lilydjwg.me/2022/3/8/qt-font-issues.216133.html
 // https://forum.suse.org.cn/t/topic/15181/2
 
-constexpr auto TestText = R"(
+const auto TestText = uR"(
 格拉哥里字母：Ⰽⱁⱀⱄⱅⰰⱀⱅⰹⱀ Ⰹⱍⰹⰳⱁⰲ
 爪哇文：꧁ / ꧂
 西夏文：𗷲𗒅
@@ -29,7 +30,7 @@ constexpr auto TestText = R"(
 补充符号和象形文字：🥹😁🤑🤗🤭🫠
 科普特文：Ϝⲓⲟⲕⲟ Ⳑⲩ
 关复门
-)";
+)"_s;
 
 int main(int argc, char *argv[])
 {
